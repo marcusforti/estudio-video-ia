@@ -1,0 +1,15 @@
+# gerado
+site/dist/
+graphify-out/
+.wrangler/
+.dev.vars*
+node_modules/
+__pycache__/
+*.pyc
+.env
+.env.*
+.claude/
+.codex/
+*.log
+.DS_Store
+Thumbs.db

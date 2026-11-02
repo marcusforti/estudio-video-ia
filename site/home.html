@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Estúdio de Vídeo com IA: o workflow completo, aberto</title>
+<meta name="description" content="Como editar vídeo com IA do pedido ao post: folha de rosto, storyboard, voz local, lip sync, GPU alugada, motion em código e skills para baixar.">
+<meta property="og:title" content="Estúdio de Vídeo com IA">
+<meta property="og:description" content="O workflow completo de edição de vídeo com IA, aberto, com folhas, skills e os erros que custaram caro.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://estudio-video-ia.marcusforti2.workers.dev/static/img/og.jpg">
+<link rel="preload" href="/static/fonts/anton-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/static/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/static/estilo.css">
+<link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+</head>
+<body class="inicio">
+<a class="pular" href="#workflow">Pular para o conteúdo</a>
+
+<section class="abertura" aria-label="Capa">
+  <div class="palco">
+    <img class="sala" id="sala" src="/static/img/mesa-moviola.jpg" alt="Mesa de edição de filme Moviola, com rolos e monitor" width="1280" height="720">
+  </div>
+  <div class="trilho-cartao">
+    <article class="cartao carimbado" id="cartao">
+      <h1 class="cartao-titulo"><span>Estúdio</span> <span>de vídeo</span> <span>com IA</span></h1>
+      <dl class="cartao-campos">
+        <div><dt>Projeto</dt><dd>O workflow completo, aberto</dd></div>
+        <div><dt>Dono</dt><dd>Marcus Forti</dd></div>
+        <div><dt>Versão</dt><dd>v1, novembro de 2026</dd></div>
+        <div><dt>Etapas</dt><dd>17, com 6 portões</dd></div>
+      </dl>
+      <p class="cartao-apoio">Como a gente edita vídeo com IA, do pedido ao post: folhas, voz local, lip sync, GPU alugada, motion em código, skills para baixar e os erros que custaram caro.</p>
+      <div class="cartao-base">
+        <span>Feito em produção real</span>
+        <a class="botao" href="#baixar">Baixar as skills</a>
+        <a href="#workflow">Ver o workflow</a>
+      </div>
+    </article>
+  </div>
+  <a class="canhoto" id="canhoto" href="#indice">Índice da pasta</a>
+  <div class="passantes">
+    <h2 class="passantes-titulo">Todo vídeo aqui nasce no papel</h2>
+    <figure class="passa passa-a">
+      <img src="/static/img/claquete.jpg" alt="Claquete digital aberta na mão de um assistente durante uma filmagem" width="1400" height="959" loading="lazy">
+      <figcaption>Claquete em uma filmagem de 2008. Todo projeto começa identificado: nome, versão, dono.</figcaption>
+    </figure>
+    <figure class="passa passa-b">
+      <img src="/static/img/storyboard-desenhado.jpg" alt="Folha de storyboard desenhada à mão, com quadros em preto e setas vermelhas de câmera" width="1100" height="1631" loading="lazy">
+      <figcaption>Storyboard desenhado à mão. Cena a cena, antes de qualquer render.</figcaption>
+    </figure>
+    <figure class="passa passa-c">
+      <img src="/static/img/mesa-de-luz.jpg" alt="Tiras de filme e slides sobre uma mesa de luz" width="1400" height="971" loading="lazy">
+      <figcaption>Filme sobre a mesa de luz. Aqui a folha de contato aparece em três momentos: material, imagens, quadros finais.</figcaption>
+    </figure>
+    <figure class="passa passa-d">
+      <video autoplay muted loop playsinline poster="/static/img/projetor-poster.jpg" width="854" height="480" aria-label="Projetor de cinema com rolos girando">
+        <source src="/static/img/projetor.mp4" type="video/mp4">
+      </video>
+      <figcaption>Projetor de cinema. O filme só roda depois das folhas aprovadas.</figcaption>
+    </figure>
+    <figure class="passa passa-e">
+      <img src="/static/img/arquivo-de-filmes.jpg" alt="Corredor de arquivo com prateleiras de latas de filme e duas pessoas de costas" width="1000" height="1333" loading="lazy">
+      <figcaption>Arquivo de filmes em Amsterdã. Rastro de tudo: origem, crédito, comando de retomada.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="secao secao-papel" id="workflow">
+  <div class="cabeca">
+    <h2>17 etapas, 6 portões</h2>
+    <p>Cada etapa abre o capítulo que explica como fazer. O carimbo vermelho é um portão: ali o dono do vídeo decide. O preto é uma trava: o agente para sozinho até cumprir a condição. Escolha o tipo de vídeo e veja o caminho.</p>
+  </div>
+  <div class="seletor" role="group" aria-label="Tipo de vídeo">
+    <button type="button" data-tipo="reel" aria-pressed="true">Reel com motion</button>
+    <button type="button" data-tipo="talking" aria-pressed="false">Talking head</button>
+    <button type="button" data-tipo="explicativo" aria-pressed="false">Explicativo gerado</button>
+    <button type="button" data-tipo="vsl" aria-pressed="false">VSL</button>
+    <button type="button" data-tipo="aula" aria-pressed="false">Aula longa</button>
+  </div>
+  <p class="seletor-texto" id="seletor-texto" aria-live="polite">Entram de 9 a 18 takes e um áudio de briefing. Mapa primeiro, voz com tempo por palavra, takes na velocidade real, telas de sistema de verdade e render em máquina alugada.</p>
+  {{mapa}}
+</section>
+
+<section class="secao secao-folhas" id="folhas">
+  <div class="prato" id="prato">
+    <div class="prato-item ativo" data-prato="rosto" data-ui>
+      <div class="ficha carimbado-ficha">
+        <p class="ficha-titulo">Rosto · Reel lavanderia</p>
+        <dl>
+          <div><dt>Objetivo</dt><dd>Quem assiste sai querendo visitar um negócio do bairro</dd></div>
+          <div><dt>Público</dt><dd>Quem vende IA. Não é o dono da lavanderia</dd></div>
+          <div><dt>Voz</dt><dd>Clone do criador, com autorização própria</dd></div>
+          <div><dt>Formato</dt><dd>1080x1920, 30 fps, 2:30, teto 3:00</dd></div>
+          <div><dt>Vetos</dt><dd>Sem logo real, sem promessa de resultado</dd></div>
+        </dl>
+      </div>
+    </div>
+    <img class="prato-item" data-prato="storyboard" src="/static/img/storyboard-desenhado.jpg" alt="Storyboard desenhado à mão" loading="lazy" width="1100" height="1631">
+    <img class="prato-item" data-prato="contato" src="/static/img/mesa-de-luz.jpg" alt="Tiras de filme sobre mesa de luz" loading="lazy" width="1400" height="971">
+  </div>
+  <div class="folhas-texto">
+    <div class="abas-folha" role="group" aria-label="Escolha a folha">
+      <button type="button" data-folha="rosto" aria-pressed="true">Rosto</button>
+      <button type="button" data-folha="storyboard" aria-pressed="false">Storyboard</button>
+      <button type="button" data-folha="contato" aria-pressed="false">Contato</button>
+    </div>
+    <div class="folha-info" data-info="rosto">
+      <h2>Folha de rosto</h2>
+      <p>A página única que uma sessão nova lê para continuar o trabalho. São 31 campos, 11 deles obrigatórios. Público, voz, vetos, custo e portões ficam escritos antes do primeiro render.</p>
+      <div class="celulas">
+        <a href="/folha-de-rosto/preencher/">Preencher aqui</a>
+        <a href="/folha-de-rosto/">Como usar</a>
+      </div>
+    </div>
+    <div class="folha-info" data-info="storyboard" hidden>
+      <h2>Folha de storyboard</h2>
+      <p>A tabela cena a cena, com 14 colunas e 17 regras. A principal: a imagem mostra literalmente o que a voz diz. Você aprova quadros e fala antes de renderizar.</p>
+      <div class="celulas">
+        <a href="/storyboard/preencher/">Preencher aqui</a>
+        <a href="/storyboard/">Como usar</a>
+      </div>
+    </div>
+    <div class="folha-info" data-info="contato" hidden>
+      <h2>Folha de contato</h2>
+      <p>Uma imagem com um quadro a cada poucos segundos, feita em três momentos: material de entrada, imagens geradas e quadros finais. É como se confere rosto livre e área segura sem assistir ao vídeo inteiro.</p>
+      <div class="celulas">
+        <a href="/conferencia/">Conferência</a>
+        <a href="/skills/#estudio-entrega">Skill de entrega</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="secao secao-indice" id="indice">
+  <h2>O arquivo inteiro</h2>
+  <div class="gavetas">
+    {{gavetas}}
+  </div>
+</section>
+
+<section class="secao secao-papel-2" id="skills">
+  <div class="cabeca">
+    <h2>{{n_skills}} skills para baixar</h2>
+    <p>Prontas para Claude Code e Codex. Cada uma carrega os portões: consentimento antes de clonar voz ou mexer em rosto, confirmação antes de gastar, máquina destruída ao terminar.</p>
+  </div>
+  <ul class="tiles">
+    {{tiles}}
+  </ul>
+</section>
+
+<section class="secao secao-prova" id="prova">
+  <div class="cabeca">
+    <h2>O que foi testado, e o que não foi</h2>
+    <p>Cada afirmação nos capítulos leva um selo que diz de onde ela veio. Aqui está o resumo sem maquiagem.</p>
+  </div>
+  <div class="livro">
+    <div class="livro-coluna">
+      <h3>Testado aqui, em produção</h3>
+      <ul>
+        <li>25 projetos de vídeo levantados, de loops de poucos segundos a aulas longas remontadas</li>
+        <li>4 modelos abertos de lip sync em GPU A100 alugada</li>
+        <li>Clonagem local com OmniVoice, XTTS e RVC na voz do próprio autor</li>
+        <li>Render em CPU alugada de 32 a 80 núcleos, de US$ 0,135 a US$ 0,54 por hora</li>
+        <li>Cerca de 20 ciclos de máquina alugada e destruída</li>
+      </ul>
+    </div>
+    <div class="livro-coluna livro-coluna-b">
+      <h3>Não testado</h3>
+      <ul>
+        <li>Serviços pagos de lip sync: os preços vêm da página de cada fornecedor</li>
+        <li>Comparativo cego de modelos de voz em pt-BR: não encontramos nenhum independente</li>
+        <li>Lip sync em português: nenhum benchmark aberto inclui o idioma</li>
+        <li>Resultado de audiência por técnica: os projetos não registraram isso</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+{{grafo}}
+
+<section class="secao secao-carta" id="baixar">
+  <p class="carta-texto">As folhas e as skills são suas. Use, adapte e mande para quem edita com você.</p>
+  <article class="carta">
+    <h2>Leve a pasta</h2>
+    <p>Abra o PowerShell, cole a linha e abra uma sessão nova do Claude Code ou do Codex.</p>
+    <pre><code id="comando">irm https://raw.githubusercontent.com/marcusforti/estudio-video-ia/main/instalar.ps1 | iex</code></pre>
+    <button type="button" class="botao botao-largo" data-copiar="comando">Copiar o comando</button>
+    <p class="carta-mais"><a href="/skills/">Linux, macOS e zip manual</a></p>
+  </article>
+</section>
+
+<footer class="verso">
+  <div class="verso-cartao">
+    <div class="verso-a">
+      <p class="verso-assina">Bom corte.</p>
+      <p>Esta pasta é o que aprendemos editando vídeo com IA todo dia. Se algo aqui parar de funcionar, abra uma issue no repositório.</p>
+    </div>
+    <div class="verso-b">
+      <img class="selo-postal" src="/static/img/claquete.jpg" alt="" width="88" height="117" loading="lazy">
+      <a href="https://github.com/marcusforti/estudio-video-ia" target="_blank" rel="noopener">Repositório no GitHub</a>
+      <a href="/comece-aqui/">Comece aqui</a>
+      <a href="/skills/">Skills</a>
+      <a href="/licencas/">Licenças e créditos</a>
+    </div>
+    <p class="creditos">Fotos e vídeo, via Wikimedia Commons, reduzidos para a web e exibidos em preto e branco: <a href="https://commons.wikimedia.org/wiki/File:Moviola_Flatbed_Editor_M-TT-16.jpg" target="_blank" rel="noopener">Moviola</a>, Lucistian, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Clapperboard,_O2_film,_September_2008.jpg" target="_blank" rel="noopener">Claquete</a>, Mattbr, <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener">CC BY 2.0</a> · <a href="https://commons.wikimedia.org/wiki/File:Decoupage1.jpg" target="_blank" rel="noopener">Decoupage1</a>, Irakli Metreveli, <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener">CC0</a> · <a href="https://commons.wikimedia.org/wiki/File:2015_04_08_009_Analogfilme.jpg" target="_blank" rel="noopener">Analogfilme</a>, Friedrich Haag, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a> · <a href="https://commons.wikimedia.org/wiki/File:DGB_(large_feed_reels)_-_Cinema_projector.webm" target="_blank" rel="noopener">Projetor</a>, La Fonderie, <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener">CC BY 3.0</a>, recortado · Arquivo de filmes do <a href="https://commons.wikimedia.org/wiki/File:EYE_Film_Institute_Netherland_-_Library_and_Collections_building_-_Film_storage_-_Overamstel,_Amsterdam_-_2.JPG" target="_blank" rel="noopener">EYE Film Institute</a>, Hansmuller, <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">CC BY-SA 4.0</a>. Lista completa em <a href="/licencas/">Licenças e créditos</a>.</p>
+    <p class="imprenta">Marcus Forti, 2026. Textos e skills sob licença MIT.</p>
+  </div>
+</footer>
+<script src="/static/site.js" defer></script>
+</body>
+</html>

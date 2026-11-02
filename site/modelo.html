@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{titulo}} · Estúdio de Vídeo com IA</title>
+<meta name="description" content="{{descricao}}">
+<meta property="og:title" content="{{titulo}} · Estúdio de Vídeo com IA">
+<meta property="og:description" content="{{descricao}}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{url}}">
+<link rel="preload" href="/static/fonts/anton-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/static/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/static/estilo.css">
+<link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+</head>
+<body class="doc {{classe}}">
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<header class="barra">
+  <a class="marca" href="/">Estúdio de Vídeo com IA</a>
+  <nav aria-label="Principal">
+    <a href="/workflow/">Workflow</a>
+    <a href="/motion/">Motion</a>
+    <a href="/skills/">Skills</a>
+    <a href="https://github.com/marcusforti/estudio-video-ia" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+</header>
+<div class="pasta">
+  <details class="indice-movel">
+    <summary>Índice da pasta</summary>
+    <ul>{{abas}}</ul>
+  </details>
+  <nav class="abas" aria-label="Capítulos"><ul>{{abas}}</ul></nav>
+  <main class="folha" id="conteudo">
+    <h1>{{titulo}}</h1>
+    {{corpo}}
+    <nav class="rodape-nav" aria-label="Folhas vizinhas">{{rodape_nav}}</nav>
+  </main>
+</div>
+<footer class="rodape-doc">
+  <p>Por Marcus Forti. Textos e skills sob licença MIT. Marcas e modelos citados pertencem aos seus donos.</p>
+  <p><a href="/">Início</a> <a href="/licencas/">Licenças e créditos</a> <a href="https://github.com/marcusforti/estudio-video-ia" target="_blank" rel="noopener">GitHub</a></p>
+</footer>
+<script src="/static/site.js" defer></script>
+</body>
+</html>
